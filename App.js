@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 
-import * as firebase from 'firebase';
-import { firebaseConfig } from "./firebase";
+import firebase from 'firebase/app'
+import firebaseConfig from "./firebase";
 
 
 if (firebase.apps.length === 0) {
