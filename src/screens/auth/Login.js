@@ -25,7 +25,7 @@ import firebase from 'firebase'
 
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
-const bgImage = require('../../../assets/SignUp.png');
+const bgImage = require('../../../assets/img/deadpool-2.png');
 
 export class Login extends Component {
     constructor(props) {
