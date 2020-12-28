@@ -1,4 +1,4 @@
-import config from '../config'
+import config from '../../config'
 
 export const publicApiKey = config.API_PUBLIC_KEY
 export const privateApiKey = config.API_PRIVATE_KEY

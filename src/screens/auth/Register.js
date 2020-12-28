@@ -27,7 +27,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
-const bgImage = require('../../../assets/SignUp.png');
+const bgImage = require('../../img/deadpool-2.png');
 
 export class Register extends Component {
     constructor(props) {
