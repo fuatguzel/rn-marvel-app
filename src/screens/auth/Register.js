@@ -22,7 +22,7 @@ import {
 import firebase from 'firebase'
 
 
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 
 const WIDTH = Dimensions.get('window').width;

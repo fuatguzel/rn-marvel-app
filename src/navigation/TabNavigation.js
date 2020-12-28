@@ -35,7 +35,7 @@ export class TabNavigation extends Component {
                 }}
             >
                 <Tab.Screen name="Home" component={HomeStack} />
-                <Tab.Screen name="Search" component={SearchStack} />
+                {/* <Tab.Screen name="Search" component={SearchStack} /> */}
             </Tab.Navigator>
         )
     }
