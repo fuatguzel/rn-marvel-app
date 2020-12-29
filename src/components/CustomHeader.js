@@ -9,7 +9,7 @@ const CustomHeader = ({ title, isHome, navigation }) => {
                     isHome ?
                         <Image
                             style={{ width: 30, height: 30 }}
-                            source={require('../img/icons/icons8-menu.gif')}
+                            source={require('../img/icons/menu.png')}
                             resizeMode='contain'
                         /> :
                         <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center' }}

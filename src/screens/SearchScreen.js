@@ -5,10 +5,10 @@ import CustomHeader from '../components/CustomHeader'
 export default function Search() {
     return (
         <View>
-            <CustomHeader title='Home' isHome={true} />
+            <CustomHeader title='Search' isHome={true} />
             <View
                 style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Text>Search</Text>
+                <Text>Search Screen</Text>
             </View>
         </View>
     )

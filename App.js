@@ -10,10 +10,11 @@ if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
 }
 
-import TabNavigation from "./src/navigation/TabNavigation";
+//import TabNavigation from "./src/navigation/TabNavigation";
 import AuthStack from "./src/navigation/AuthStack";
 
 import { NavigationContainer } from '@react-navigation/native';
+import DraweNavigation from './src/navigation/DrawerNavigation';
 
 const theme = {
   colors: {
@@ -48,7 +49,7 @@ export class App extends Component {
         <ThemeProvider theme={theme}>
           <StatusBar style="auto" />
           <NavigationContainer>
-            {this.state.isAuthenticated ? <TabNavigation /> : <AuthStack />}
+            {this.state.isAuthenticated ? <DraweNavigation /> : <AuthStack />}
           </NavigationContainer>
         </ThemeProvider>
       </View>
