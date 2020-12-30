@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 //import { Button, View } from 'react-native';
-import { createDrawerNavigator, DrawerItems } from 'react-navigation-drawer';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import TabNavigation from "./TabNavigation";
 import ProfileScreen from '../screens/ProfileScreen'
 

@@ -7,7 +7,7 @@ import CustomHeader from '../components/CustomHeader'
 export default function HomeScreen({ navigation }) {
     return (
         <View>
-            <CustomHeader title='Home' isHome={true} />
+            <CustomHeader title='Home' isHome={true} navigation={navigation} />
             <View
                 style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                 <Text>Home Screen</Text>

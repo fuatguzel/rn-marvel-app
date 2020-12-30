@@ -7,11 +7,13 @@ const CustomHeader = ({ title, isHome, navigation }) => {
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                 {
                     isHome ?
-                        <Image
-                            style={{ width: 30, height: 30 }}
-                            source={require('../img/icons/menu.png')}
-                            resizeMode='contain'
-                        /> :
+                        <TouchableOpacity onPress={() => navigation.openDrawer()}>
+                            <Image
+                                style={{ width: 30, height: 30 }}
+                                source={require('../img/icons/menu.png')}
+                                resizeMode='contain'
+                            />
+                        </TouchableOpacity> :
                         <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center' }}
                             onPress={() => navigation.goBack()}
                         >
@@ -34,7 +36,7 @@ const CustomHeader = ({ title, isHome, navigation }) => {
                 <Text>{title}</Text>
             </View>
             <View style={{ flex: 1 }}></View>
-        </View>
+        </View >
     )
 }
 
