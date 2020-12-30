@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 import CustomHeader from '../components/CustomHeader'
 
-export default function Search() {
+export default function Search({ navigation }) {
     return (
         <View>
             <CustomHeader title='Search' isHome={true} navigation={navigation} />
