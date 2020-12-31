@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import TabNavigation from "./TabNavigation";
 import ProfileScreen from '../screens/ProfileScreen'
+import SettingsScreen from '../screens/SettingsScreen'
 
 const Drawer = createDrawerNavigator();
 
@@ -11,6 +12,7 @@ export default function DraweNavigation() {
         <Drawer.Navigator initialRouteName="Home">
             <Drawer.Screen name="Home" component={TabNavigation} />
             <Drawer.Screen name="Profile" component={ProfileScreen} />
+            <Drawer.Screen name="Settings" component={SettingsScreen} />
         </Drawer.Navigator>
     );
 }

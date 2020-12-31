@@ -29,7 +29,7 @@ const CustomHeader = ({ title, isHome, navigation }) => {
             </View>
             <View style={{ flex: 1.5, justifyContent: 'center', alignItems: 'center' }}>
                 <Image
-                    style={{ width: 30, height: 309 }}
+                    style={{ width: 100, height: 300 }}
                     source={require('../img/icons/marvel-avengers.png')}
                     resizeMode='contain'
                 />

@@ -2,6 +2,8 @@ import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 import CustomHeader from '../components/CustomHeader'
 
+import { fetchComics } from '../api/fetchData'
+
 //import HomeDetail from './HomeDetail'
 
 export default function HomeScreen({ navigation }) {
