@@ -61,7 +61,7 @@ export class Login extends Component {
                         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                             <ScrollView style={{ flex: 1, padding: 20 }}>
                                 {/* SOME MESSAGE */}
-                                <Text style={{ fontSize: 40, color: 'white', marginVertical: 80 }}>{'Welcome\nBack'}</Text>
+                                <Text style={{ fontSize: 40, color: '#e71a24', marginVertical: 80 }}>{'Welcome\nBack'}</Text>
 
                                 {/* FORM */}
                                 <TextInput
@@ -69,7 +69,7 @@ export class Login extends Component {
                                         ...styles.inputStyle,
                                     }}
                                     placeholder={'Email'}
-                                    placeholderTextColor={'grey'}
+                                    placeholderTextColor={'#e71a24'}
                                     onChangeText={(email) => this.setState({ email })}
                                 />
 
@@ -79,13 +79,13 @@ export class Login extends Component {
                                         marginTop: 50,
                                     }}
                                     placeholder={'Password'}
-                                    placeholderTextColor={'grey'}
+                                    placeholderTextColor={'#e71a24'}
                                     secureTextEntry
                                     onChangeText={(password) => this.setState({ password })}
                                 />
 
                                 <View style={{ width: '100%', flexDirection: 'row', alignItems: 'center' }}>
-                                    <Text style={{ fontSize: 30, color: '#41444E', marginVertical: 50 }}>Sign in</Text>
+                                    <Text style={{ fontSize: 30, color: '#e71a24', backgroundColor: 'white', marginVertical: 50 }}>Sign in</Text>
                                     <View style={{ flex: 1, alignItems: 'flex-end' }}>
                                         <TouchableOpacity
                                             style={{
@@ -119,7 +119,7 @@ export class Login extends Component {
                         </TouchableWithoutFeedback>
                     </KeyboardAvoidingView>
                 </SafeAreaView>
-            </ImageBackground>
+            </ImageBackground >
         )
     }
 }
