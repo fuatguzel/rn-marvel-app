@@ -3,6 +3,7 @@ import { Text, View } from 'react-native'
 
 import HomeScreen from '../screens/HomeScreen';
 import HomeDetail from '../screens/HomeDetail';
+import CharacterDetails from '../screens/CharacterDetails';
 import { createStackNavigator } from "@react-navigation/stack";
 
 
@@ -13,6 +14,7 @@ export class HomeStack extends Component {
             <Stack.Navigator initialRouteName='Home'>
                 <Stack.Screen name='Home' component={HomeScreen} options={{ headerShown: false }}></Stack.Screen>
                 <Stack.Screen name='HomeDetail' component={HomeDetail} options={{ headerShown: false }}></Stack.Screen>
+                <Stack.Screen name='CharacterDetails' component={CharacterDetails} options={{ headerShown: false }}></Stack.Screen>
             </Stack.Navigator>
         )
     }

@@ -20,10 +20,10 @@ export default function HomeDetail({ navigation }) {
                     source={{ uri: `${route.params.thumbnail.path}.${route.params.thumbnail.extension}` }}
                 />
                 <View style={{ flexWrap: 'wrap' }}>
-                    <Text style={{ marginTop: 10 }}>Title : {route.params.title}</Text>
-                    <Text style={{ marginTop: 10 }} >Description : {isNone ? 'none' : route.params.description}</Text>
-                    <Text style={{ marginTop: 10 }} >Page Count : {route.params.pageCount}</Text>
-
+                    <Text style={{ marginTop: 10 }}>Title : {route.params.name}</Text>
+                    <Text style={{ marginTop: 10 }}>Description : {isNone ? 'none' : route.params.description}</Text>
+                    <Text style={{ marginTop: 10 }}>Comics Count : {isNone ? 'none' : route.params.comics.available}</Text>
+                    <Text style={{ marginTop: 10 }}>Stories Count : {isNone ? 'none' : route.params.stories.available}</Text>
                 </View>
             </ScrollView>
         </View>

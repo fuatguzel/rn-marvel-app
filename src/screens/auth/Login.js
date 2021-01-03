@@ -60,16 +60,14 @@ export class Login extends Component {
                     <KeyboardAvoidingView style={{ flex: 1 }}>
                         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                             <ScrollView style={{ flex: 1, padding: 20 }}>
-                                {/* SOME MESSAGE */}
-                                <Text style={{ fontSize: 40, color: '#e71a24', marginVertical: 80 }}>{'Welcome\nBack'}</Text>
+                                <Text style={{ fontSize: 40, color: 'black', fontWeight: 'bold', marginVertical: 80 }}>{'Welcome\nBack'}</Text>
 
                                 {/* FORM */}
                                 <TextInput
                                     style={{
                                         ...styles.inputStyle,
                                     }}
-                                    placeholder={'Email'}
-                                    placeholderTextColor={'#e71a24'}
+                                    placeholder='Email'
                                     onChangeText={(email) => this.setState({ email })}
                                 />
 
@@ -78,14 +76,12 @@ export class Login extends Component {
                                         ...styles.inputStyle,
                                         marginTop: 50,
                                     }}
-                                    placeholder={'Password'}
-                                    placeholderTextColor={'#e71a24'}
+                                    placeholder='Password'
                                     secureTextEntry
                                     onChangeText={(password) => this.setState({ password })}
                                 />
 
                                 <View style={{ width: '100%', flexDirection: 'row', alignItems: 'center' }}>
-                                    <Text style={{ fontSize: 30, color: '#e71a24', backgroundColor: 'white', marginVertical: 50 }}>Sign in</Text>
                                     <View style={{ flex: 1, alignItems: 'flex-end' }}>
                                         <TouchableOpacity
                                             style={{
@@ -94,7 +90,7 @@ export class Login extends Component {
                                                 borderRadius: 40,
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
-                                                backgroundColor: '#4DB7E0',
+                                                backgroundColor: 'rgba(0,0,0,0.7)',
                                             }}>
                                             <MaterialIcons name={'arrow-forward'} size={30} color={'white'}
                                                 onPress={() => this.onSignIn()}
@@ -105,13 +101,13 @@ export class Login extends Component {
 
                                 <View style={{ width: '100%', flexDirection: 'row', alignItems: 'center' }}>
                                     <TouchableOpacity style={{ ...styles.textBtn }} onPress={() => this.props.navigation.navigate('Register')}>
-                                        <Text style={{ ...styles.textBtnLabel }}>Sign up</Text>
+                                        <Text style={{ ...styles.textBtnLabel, color: 'white', fontWeight: 'bold' }}>Sign up</Text>
                                     </TouchableOpacity>
                                     <View style={{ flex: 1, alignItems: 'flex-end' }}>
                                         <TouchableOpacity style={{ ...styles.textBtn }}
                                             onPress={() => this.props.navigation.navigate('ForgotPassword')}
                                         >
-                                            <Text style={{ ...styles.textBtnLabel }}>Forgot Password</Text>
+                                            <Text style={{ ...styles.textBtnLabel, color: 'red', fontWeight: 'bold' }}>Forgot Password</Text>
                                         </TouchableOpacity>
                                     </View>
                                 </View>
@@ -126,13 +122,13 @@ export class Login extends Component {
 
 const styles = StyleSheet.create({
     inputStyle: {
-        fontSize: 20,
         color: 'black',
         width: '100%',
         marginTop: 100,
         borderBottomColor: 'lightgrey',
         borderBottomWidth: 0.5,
         paddingBottom: 15,
+        height: 20
     },
     textBtn: {
         borderBottomColor: '#4DB7E0',
@@ -140,26 +136,8 @@ const styles = StyleSheet.create({
         marginVertical: 50,
     },
     textBtnLabel: {
-        fontSize: 20,
-        color: '#4DB7E0',
+        color: 'red'
     },
 });
 
 export default Login
-
-
-// <View>
-            //     <TextInput
-            //         placeholder="email"
-            //         onChangeText={(email) => this.setState({ email })}
-            //     />
-            //     <TextInput
-            //         placeholder="password"
-            //         secureTextEntry={true}
-            //         onChangeText={(password) => this.setState({ password })}
-            //     />
-            //     <Button
-            //         onPress={() => this.onSignIn()}
-            //         title='Sign Up'
-            //     />
-            // </View>

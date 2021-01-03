@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Image } from "react-native";
+import { Image, View } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import HomeStack from './HomeStack';
@@ -31,7 +31,9 @@ export class TabNavigation extends Component {
                                 : require('../img/icons/search-black.png')
                         }
 
-                        return <Image source={iconName} style={{ width: 20, height: 20 }} resizeMode='contain' />
+                        return <View style={{ justifyContent: 'center' }}>
+                            <Image source={iconName} style={{ width: 20, height: 20, justifyContent: 'center' }} resizeMode='contain' />
+                        </View>
                     }
                 })}
                 tabBarOptions={{

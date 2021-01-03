@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Alert } from "react-native";
+import { Text, View, StyleSheet, Alert, Image, TouchableOpacity } from "react-native";
 import { Input, Button } from "react-native-elements";
-import { MaterialIcons } from "@expo/vector-icons";
-
-import firebase from 'firebase';
+import * as firebase from "firebase";
 
 export class ForgotPassword extends Component {
     state = {
@@ -11,10 +9,9 @@ export class ForgotPassword extends Component {
     };
 
     handleResetPassword = () => {
-        const [email] = this.state;
         firebase
             .auth()
-            .sendPasswordResetEmail(email)
+            .sendPasswordResetEmail(this.state.email)
             .then(
                 () => {
                     Alert.alert("Password reset e-mail has been sent");
@@ -28,10 +25,19 @@ export class ForgotPassword extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center' }}
+                    onPress={() => this.props.navigation.goBack()}
+                >
+                    <Image
+                        style={{ width: 25, height: 25, marginLeft: 5 }}
+                        source={require('../../img/icons/back.png')}
+                        resizeMode='contain'
+                    />
+                    <Text>Back</Text>
+                </TouchableOpacity>
                 <Input
                     placeholder="E-mail"
-                    leftIcon={<MaterialIcons name="email" size={15} color="black" />}
-                    value={email}
+                    value={this.state.email}
                     onChangeText={(text) => this.setState({ email: text })}
                 />
                 <Button title="Reset password" onPress={this.handleResetPassword} />
