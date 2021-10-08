@@ -1,6 +1,6 @@
 ## Marvel App
 
-Marvel karakterlerini ve çizgi romanlarını listeleyen mobil uygulama
+Mobile app listing Marvel characters and comics
 
 ### Installation & Run
 
